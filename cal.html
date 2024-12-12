@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculater</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    body{
+      background-color: #253042;
+    }
+    h1 {
+      font-size: xxx-large;
+       
+      text-align: center;
+      text-decoration: dashed;
+      font-family: "Playwrite IT Moderna", cursive;
+      color: aliceblue;
+    }
+     
+    .interface {
+       
+      padding: 5px;
+      width: 570px;
+      margin: auto;
+      background-color: #253042;
+    }
+    .palette {
+      display: flex;
+    }
+    .numpalette {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 576px;
+      flex-wrap: wrap;
+      margin: auto;
+    }
+    .oppalette {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      width: 100px;
+    }
+    #screen {
+      background-color: transparent;
+      border: none;
+      color: aliceblue;
+      font-size: xxx-large;
+      display: block;
+      padding: 10px;
+      margin: 10px;
+      text-align: right;
+      height: 50px;
+      width: 430px;
+      margin: auto;
+    }
+    .numb {
+      padding: 26px 0px;
+      margin: 10px;
+      width: 100px;
+      background-color: #3c4759;
+      color: aliceblue;
+      border: none;
+    }
+    .numb:hover{
+      background-color: #7e75ff;
+    }
+
+  </style>
+  <body>
+    <h1>Calculator :</h1>
+    <div class="interface">
+      <input type="text" name="" id="screen" />
+      <div class="numpalette">
+        <button
+          class="numb"
+          onclick="
+          currdisplayvalue=currdisplayvalue+'1';
+          document.querySelector('#screen').value = currdisplayvalue;
+          "
+        >
+          1
+        </button>
+        <button
+          class="numb"
+          onclick="
+          currdisplayvalue=currdisplayvalue+'2';
+          document.querySelector('#screen').value = currdisplayvalue;
+          "
+        >
+          2
+        </button>
+        <button
+          class="numb"
+          onclick="
+          currdisplayvalue=currdisplayvalue+'3';
+          document.querySelector('#screen').value = currdisplayvalue;
+          "
+        >
+          3
+        </button>
+        <button
+          class="numb"
+          onclick="
+        currdisplayvalue=currdisplayvalue+'+';
+        document.querySelector('#screen').value = currdisplayvalue;
+        "
+        >
+          +
+        </button>
+        <button
+          class="numb"
+          onclick="
+          currdisplayvalue=currdisplayvalue+'4';
+          document.querySelector('#screen').value = currdisplayvalue;
+          "
+        >
+          4
+        </button>
+        <button
+          class="numb"
+          onclick="
+          currdisplayvalue=currdisplayvalue+'5';
+          document.querySelector('#screen').value = currdisplayvalue;
+          "
+        >
+          5
+        </button>
+        <button
+          class="numb"
+          onclick="
+          currdisplayvalue=currdisplayvalue+'6';
+          document.querySelector('#screen').value = currdisplayvalue;
+          "
+        >
+          6
+        </button>
+        <button
+          class="numb"
+          onclick="
+        currdisplayvalue=currdisplayvalue+'-';
+        document.querySelector('#screen').value = currdisplayvalue;
+        "
+        >
+          -
+        </button>
+        <button
+          class="numb"
+          onclick="
+          currdisplayvalue=currdisplayvalue+'7';
+          document.querySelector('#screen').value = currdisplayvalue;
+          "
+        >
+          7
+        </button>
+        <button
+          class="numb"
+          onclick="
+          currdisplayvalue=currdisplayvalue+'8';
+          document.querySelector('#screen').value = currdisplayvalue;
+          "
+        >
+          8
+        </button>
+        <button
+          class="numb"
+          onclick="
+          currdisplayvalue=currdisplayvalue+'9';
+          document.querySelector('#screen').value = currdisplayvalue;
+          "
+        >
+          9
+        </button>
+        <button
+          class="numb"
+          onclick="
+        currdisplayvalue=currdisplayvalue+'*';
+        document.querySelector('#screen').value = currdisplayvalue;
+        "
+        >
+          *
+        </button>
+        <button
+          class="numb"
+          onclick="
+        currdisplayvalue='';
+        document.querySelector('#screen').value = currdisplayvalue;
+        "
+        >
+          C
+        </button>
+        <button
+          class="numb"
+          onclick="
+          currdisplayvalue=currdisplayvalue+'0';
+          document.querySelector('#screen').value = currdisplayvalue;
+          "
+        >
+          0
+        </button>
+        <button
+          class="numb"
+          onclick="
+          let result = eval(currdisplayvalue);
+        currdisplayvalue=result ;
+        document.querySelector('#screen').value = currdisplayvalue;
+        "
+        >
+          =
+        </button>
+        <button
+          class="numb"
+          onclick="
+        currdisplayvalue=currdisplayvalue+'/';
+        document.querySelector('#screen').value = currdisplayvalue;
+        "
+        >
+          /
+        </button>
+      </div>
+    </div>
+    <script>
+      let currdisplayvalue = "";
+      document.querySelector("#screen").value = currdisplayvalue;
+    </script>
+  </body>
+</html>
